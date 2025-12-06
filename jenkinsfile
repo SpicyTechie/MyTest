@@ -1,21 +1,22 @@
 pipeline {
     agent any
-
     stages{
-      stage('Checkout'){
-        steps {
-            git branch: 'main', url: 'https://github.com/SpicyTechie/MyTest.git'
-             }
+        stage('Checkout'){
+            steps {
+                git branch: 'main', url: 'https://github.com/SpicyTechie/MyTest.git'
+            }
         }
-    stage('Build'){
-        steps {
-            echo "Building..."             }
+        
+        stage('Build'){
+            steps {
+                echo "Building..."             }
+            }
         }
-    stage('Test'){
-        steps {
-            echo "Testing..."        
+        
+        stage('Test'){
+            steps {
+                echo "Testing..."        
              }
         }
     }
 }
-
